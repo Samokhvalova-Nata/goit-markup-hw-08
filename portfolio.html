@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="./css/main.min.css">
     </head>
 <body>
-    <!-- <header class="header">
+    <header class="header header--portfolio">
         <div class="container header__container">
             <a href="/" class="logo header__logo">
                 <span class="logo__accent">Web</span>Studio</a>
@@ -28,25 +28,84 @@
                         <a href="" class="menu__link">Контакти</a>
                     </li>
                 </ul>
-            </nav>
+            </nav> 
             <ul class="header-contacts list">
                 <li class="header-contacts__item">
                     <a href="mailto:info@devstudio.com" class="header-contacts__link">
-                        <svg class="header-contacts__icon" width="16" height="12">
+                        <svg class="header-contacts__icon envelope" width="14" height="10">
                             <use href='./images/symbol-defs.svg#envelope'></use>
                         </svg>
-                        info@devstudio.com</a>
+                    info@devstudio.com</a>
                 </li>
                 <li class="header-contacts__item">
                     <a href="tel:+380961111111" class="header-contacts__link">
-                        <svg class="header-contacts__icon" width="10" height="16">
+                        <svg class="header-contacts__icon smartphone" width="10" height="14">
                             <use href='./images/symbol-defs.svg#smartphone'></use>
                         </svg>
-                        +38 096 111 11 11</a>
+                    +38 096 111 11 11</a>
                 </li>
             </ul>
-        </div>
-    </header> -->
+            <button type="button" class="menu-open" data-menu-open>
+                <svg class="menu-open-icon" width="24" height="16">
+                    <use href="./images/symbol-defs.svg#mob-menu-close"></use>
+                </svg>
+            </button>
+        </div> 
+            <!---------------- MOBILE MENU ------------>
+            <div class="mob-menu is-hidden" data-menu>
+                <div class="mob-menu__container">
+
+                <div class="mob-menu-top">
+                    <button type="button" class="menu-close" data-menu-close>
+                        <svg class="menu-close-icon" >
+                            <use href="./images/symbol-defs.svg#close-black"></use>
+                        </svg>
+                    </button>
+                    <ul class="mob-menu__list list">
+                        <li class="mob-menu__item">
+                            <a href="./index.html" class="mob-menu__link">Студія</a>
+                        </li>
+                        <li class="mob-menu__item">
+                            <a href="./portfolio.html" class="mob-menu__link">Портфоліо</a>
+                        </li>
+                        <li class="mob-menu__item">
+                            <a href="" class="mob-menu__link">Контакти</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mob-menu-bottom">
+                    <ul class="mob-menu-contacts list">
+                            <li class="mob-menu-contacts__item">
+                                <a href="tel:+380961111111" class="mob-menu-contacts__tel">
+                                    +38 096 111 11 11</a>
+                            </li>
+                            <li class="mob-menu-contacts__item">
+                                <a href="mailto:info@devstudio.com" class="mob-menu-contacts__mail">
+                                    info@devstudio.com</a>
+                            </li>
+                    </ul>
+                    <ul class="mob-soc list">
+                            <li class="mob-soc__item">
+                                <a href="" class="mob-soc__link" aria-label="Посилання на Instagram">Instagram</a>
+                            </li>
+                            <li class="mob-soc__item">
+                                <a href="" class="mob-soc__link" aria-label="Посилання на Twitter">Twitter</a>
+                            </li>
+                            <li class="mob-soc__item">
+                                <a href="" class="mob-soc__link" aria-label="Посилання на Facebook">Facebook</a>
+                            </li>
+                            <li class="mob-soc__item">
+                                <a href="" class="mob-soc__link" aria-label="Посилання на LinkedIn">LinkedIn</a>
+                            </li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+
+        
+    </header>
     <main>
         <section class="portfolio section">
             <div class="container container__portfolio">
@@ -62,7 +121,14 @@
                     <li class="card-set__item">
                         <a href="" class="card-set__link">
                             <div class="card-set__top-wrap">
-                                <img src="./images/portfolio1.jpg" alt="Мокап ноутбука" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio1.jpg 1x, ./images/portfolio1-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio1-tab.jpg 1x, ./images/portfolio1-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio1-mob.jpg 1x, ./images/portfolio1-mob-2x.jpg 2x" media="(max-width: 767px)">
+                                    <img src="./images/portfolio1-mob.jpg" 
+                                        alt="Мокап ноутбука" 
+                                        width="450">
+                                </picture>
                                 <p class="card-set__top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                             <div class="card-set__discription">
@@ -75,7 +141,14 @@
                     <li class="card-set__item">
                         <a href="" class="card-set__link">
                             <div class="card-set__top-wrap">
-                                <img src="./images/portfolio2.jpg" alt="Два гравці в баскетбол з м'ячем" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio2.jpg 1x, ./images/portfolio2-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio2-tab.jpg 1x, ./images/portfolio2-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio2-mob.jpg 1x, ./images/portfolio2-mob-2x.jpg 2x" media="(max-width: 767px)">
+                                    <img src="./images/portfolio2-mob.jpg" 
+                                        alt="Два гравці в баскетбол з м'ячем" 
+                                        width="450">
+                                </picture>
                                 <p class="card-set__top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                             <div class="card-set__discription">
@@ -88,7 +161,14 @@
                     <li class="card-set__item">
                         <a href="" class="card-set__link">
                             <div class="card-set__top-wrap">
-                                <img src="./images/portfolio3.jpg" alt="Лого ресторану морепродуктів" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio3.jpg 1x, ./images/portfolio3-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio3-tab.jpg 1x, ./images/portfolio3-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio3-mob.jpg 1x, ./images/portfolio3-mob-2x.jpg 2x" media="(max-width: 767px)">
+                                    <img src="./images/portfolio3-mob.jpg" 
+                                        alt="Лого ресторану морепродуктів" 
+                                        width="450">
+                                </picture>
                                 <p class="card-set__top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                             <div class="card-set__discription">
@@ -101,7 +181,14 @@
                     <li class="card-set__item">
                         <a href="" class="card-set__link">
                             <div class="card-set__top-wrap">
-                                <img src="./images/portfolio4.jpg" alt="Бездротові навушники" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio4.jpg 1x, ./images/portfolio4-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio4-tab.jpg 1x, ./images/portfolio4-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio4-mob.jpg 1x, ./images/portfolio4-mob-2x.jpg 2x" media="(max-width: 767px)">
+                                    <img src="./images/portfolio4-mob.jpg" 
+                                        alt="Бездротові навушники" 
+                                        width="450">
+                                </picture>
                                 <p class="card-set__top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                             <div class="card-set__discription">
@@ -114,7 +201,14 @@
                     <li class="card-set__item">
                         <a href="" class="card-set__link">
                             <div class="card-set__top-wrap">
-                                <img src="./images/portfolio5.jpg" alt="Мокап з двома коробками" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio5.jpg 1x, ./images/portfolio5-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio5-tab.jpg 1x, ./images/portfolio5-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio5-mob.jpg 1x, ./images/portfolio5-mob-2x.jpg 2x" media="(max-width: 767px)">
+                                    <img src="./images/portfolio5-mob.jpg" 
+                                        alt="Мокап з двома коробками" 
+                                        width="450">
+                                </picture>
                                 <p class="card-set__top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>                            
                             <div class="card-set__discription">
@@ -127,7 +221,14 @@
                     <li class="card-set__item">
                         <a href="" class="card-set__link">
                             <div class="card-set__top-wrap">
-                                <img src="./images/portfolio6.jpg" alt="Мокап коп'ютера" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio6.jpg 1x, ./images/portfolio6-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio6-tab.jpg 1x, ./images/portfolio6-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio6-mob.jpg 1x, ./images/portfolio6-mob-2x.jpg 2x" media="(max-width: 767px)">
+                                    <img src="./images/portfolio6-mob.jpg" 
+                                        alt="Мокап коп'ютера" 
+                                        width="450">
+                                </picture>
                                 <p class="card-set__top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                             <div class="card-set__discription">
@@ -140,7 +241,14 @@
                     <li class="card-set__item">
                         <a href="" class="card-set__link">
                             <div class="card-set__top-wrap">
-                                <img src="./images/portfolio7.jpg" alt="Розгорнений журнал" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio7.jpg 1x, ./images/portfolio7-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio7-tab.jpg 1x, ./images/portfolio7-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio7-mob.jpg 1x, ./images/portfolio7-mob-2x.jpg 2x" media="(max-width: 767px)">
+                                    <img src="./images/portfolio7-mob.jpg" 
+                                        alt="Розгорнений журнал" 
+                                        width="450">
+                                </picture>
                                 <p class="card-set__top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                             <div class="card-set__discription">
@@ -153,7 +261,14 @@
                     <li class="card-set__item">
                         <a href="" class="card-set__link">
                             <div class="card-set__top-wrap">
-                                <img src="./images/portfolio8.jpg" alt="Мокап бірки" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio8.jpg 1x, ./images/portfolio8-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio8-tab.jpg 1x, ./images/portfolio8-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio8-mob.jpg 1x, ./images/portfolio8-mob-2x.jpg 2x" media="(max-width: 767px)">
+                                    <img src="./images/portfolio8-mob.jpg" 
+                                        alt="Мокап бірки" 
+                                        width="450">
+                                </picture>
                                 <p class="card-set__top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                             <div class="card-set__discription">
@@ -166,7 +281,14 @@
                     <li class="card-set__item">
                         <a href="" class="card-set__link">
                             <div class="card-set__top-wrap">
-                                <img src="./images/portfolio9.jpg" alt="Чоловік працює на ноутбуці" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio9.jpg 1x, ./images/portfolio9-2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio9-tab.jpg 1x, ./images/portfolio9-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio9-mob.jpg 1x, ./images/portfolio9-mob-2x.jpg 2x" media="(max-width: 767px)">
+                                    <img src="./images/portfolio9-mob.jpg" 
+                                        alt="Чоловік працює на ноутбуці" 
+                                        width="450">
+                                </picture>
                                 <p class="card-set__top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                             <div class="card-set__discription">
@@ -242,6 +364,7 @@
             </div>
         </div>
     </footer> -->
+    <script src="./js/menu.js"></script>
 </body>
 </html>
 

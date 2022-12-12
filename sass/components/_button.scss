@@ -4,8 +4,14 @@
 }
 
 .button--primary {
-    min-width: 216px;
+    min-width: 200px;
     height: 50px;
+    border: 0;
+    padding: 0;
+
+    @include tablet {
+        min-width: 216px;
+    }
 
     color: var(--primary-white-color);
     background-color: var(--accent-color);
