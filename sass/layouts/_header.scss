@@ -176,10 +176,8 @@
     width: 100vw;
     height: 100vh;
     background-color: #ffffff;
-
     padding-top: 48px;
     padding-bottom: 48px;
-
     transition: opacity var(--transition), visibility var(--transition); 
     
     @include tablet {
@@ -230,10 +228,6 @@
     transition: fill var(--transition);
 }
 
-.mob-menu__list {
-    margin-bottom: 306px;
-
-}
 .mob-menu__item:not(:last-child) {
     margin-bottom: 32px;
 }

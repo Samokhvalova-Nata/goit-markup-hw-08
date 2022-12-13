@@ -419,10 +419,6 @@ body {
   fill: var(--accent-color);
 }
 
-.mob-menu__list {
-  margin-bottom: 306px;
-}
-
 .mob-menu__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -515,6 +511,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media screen and (min-width: 480px) {
+  .hero {
+    max-width: 480px;
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -1110,6 +1111,11 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-white-color);
+}
+@media screen and (min-width: 768px) {
+  .footer-socials__title {
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-socials__title {
