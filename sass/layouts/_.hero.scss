@@ -19,22 +19,22 @@
     background-color: #C4C4C4;
 
     background-image: var(--grad),
-    url(../../images/hero-bg-mob.jpg);
+    url(../images/hero-bg-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
     @include retina {
             background-image: var(--grad),
-                url(../../images/hero-bg-mob-2x.jpg);
+                url(../images/hero-bg-mob-2x.jpg);
         }
 
     @include mobile {
         background-image: var(--grad),
-        url(../../images/hero-bg-tab.jpg);
+        url(../images/hero-bg-tab.jpg);
         @include retina {
             background-image: var(--grad),
-                url(../../images/hero-bg-tab-2x.jpg);
+                url(../images/hero-bg-tab-2x.jpg);
         }
     }
 
@@ -43,7 +43,7 @@
         url(../images/Hero.jpg);
         @include retina {
             background-image: var(--grad),
-                url(../../images/Hero-2x.jpg);
+                url(../images/Hero-2x.jpg);
         }
     }
 }
