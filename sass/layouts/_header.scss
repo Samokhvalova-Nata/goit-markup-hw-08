@@ -255,7 +255,10 @@
 }
 
 .mob-menu-contacts__tel {
-    @include font (500, 34px, 1.18, 0.02em);
+    @include font (500, 27px, 1.18, 0.02em);
+    @include mobile {
+        @include font (500, 34px, 1.18, 0.02em);
+    }
     color: var(--accent-color);
     text-decoration: none;
 }
@@ -279,7 +282,11 @@
 }
 
 .mob-soc__link {
-    @include font (500, 18px, 1.22, 0.02em);
+    @include font (500, 13px, 1.22, 0.02em);
+    @include mobile {
+        @include font (500, 18px, 1.22, 0.02em);
+    }
+    
     color: var(--accent-color);
     text-decoration: none;
 }

@@ -3,12 +3,8 @@
     height: 400px;
     padding: 118px 0;
 
-    @include mobile {
-
-    }
-
     @include tablet {
-    //     max-width: 768px;
+        max-width: 768px;
     }
 
     @include desktop {
