@@ -201,7 +201,6 @@
     padding-right: 40px;
     margin-left: auto;
     margin-right: auto;
-    // outline: 2px solid tomato;
     overflow: auto;
 }
 
@@ -213,11 +212,11 @@
     height: 40px;
 
     @include flex;
-    // margin-left: auto;
+
     padding: 0;
     border: 0;
     background-color: transparent;
-    // margin-bottom: 8px;
+
 }
 
 .menu-close-icon {
